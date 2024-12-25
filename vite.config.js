@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: "src/main.tsx", // Path to your main entry file
+      entry: "src/main.jsx", // Path to your main entry file
       name: "SearchWidget",
       fileName: "widget",
       formats: ["iife"], // Immediately Invoked Function Expression
