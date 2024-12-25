@@ -1,10 +1,14 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import SearchWidget from "./App.jsx";
+import ReactDOM from "react-dom";
+import SearchWidget from "./App";
 
-createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <SearchWidget />
-  </StrictMode>
-);
+const initWidget = (selector) => {
+  const container = document.querySelector(selector);
+  if (container) {
+    ReactDOM.createRoot(container).render(<SearchWidget />);
+  } else {
+    console.error(`Container with selector '${selector}' not found.`);
+  }
+};
+
+// Expose the init function globally on the window object
+window.SearchWidget = { init: initWidget };
