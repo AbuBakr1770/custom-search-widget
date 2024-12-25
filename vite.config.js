@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: "src/main.tsx",
+      entry: "src/main.jsx",
       name: "SearchWidget",
       fileName: "widget",
       formats: ["iife"],
